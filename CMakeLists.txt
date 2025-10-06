@@ -41,13 +41,16 @@ if ( MSVC )
 	add_definitions(-D_USE_MATH_DEFINES)
 else()
 # These settings are used for GCC and other compilers (usually on Linux systems). It sets
-#	agressive optimization for Release builds and makes sure that the X11 libraries are
-#	linked (which is required for GLFW).
-	find_package(X11 REQUIRED)
+#	agressive optimization for Release builds.
 	set(CMAKE_CXX_FLAGS "-Wall -Wextra")
 	set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 	set(CMAKE_CXX_FLAGS_DEBUG "-g")
 endif ( MSVC )
+
+if(UNIX)
+	# Makes sure that the X11 libraries are linked (which is required for GLFW) on Linux.
+	find_package(X11 REQUIRED)
+endif(UNIX)
 
 # Set all of the include directories so that you can include the necessary header files
 include_directories(
