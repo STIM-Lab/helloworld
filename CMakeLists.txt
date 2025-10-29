@@ -77,4 +77,5 @@ target_link_libraries(helloworld
 				PRIVATE glfw
 				PRIVATE GLEW::GLEW
 				PRIVATE imgui::imgui
+				PRIVATE OpenGL::GL
 )

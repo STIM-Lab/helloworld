@@ -28,6 +28,9 @@
 // I include this file to throw runtime errors, but you can also use it to output debugging information.
 #include <iostream>
 
+#include <glm/glm.hpp>
+glm::vec3 a;
+
 int resolution = 64;					// resolution of the output image (you can add a user interface element to change this)
 float* output_image_ptr = nullptr;		// pointer to the output image data (if you change the resolution make sure to change this!)
 float frame_seconds = 0.0f;		// time it takes to go through the main "game" loop (directly translates to frame rate or fps)
