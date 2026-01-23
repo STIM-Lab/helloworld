@@ -1,5 +1,5 @@
 #Specify the version being used as well as the language
-cmake_minimum_required(VERSION 3.30)
+cmake_minimum_required(VERSION 2.8)
 
 #Name your project here
 project(helloworld LANGUAGES CXX)
