@@ -9,7 +9,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}")
 set(CMAKE_CXX_STANDARD 20)
 
 # OpenGL is a very popular 3D rendering API for raster graphics
-find_package(OpenGL REQUIRED)
+find_package(OpenGL REQUIRED COMPONENTS GLX OpenGL)
 
 # GLFW is a popular window manager that works well with OpenGL
 find_package(glfw3 CONFIG REQUIRED)
